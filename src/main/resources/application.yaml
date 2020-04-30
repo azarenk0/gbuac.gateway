@@ -1,18 +1,5 @@
-server:
-  port: 8761
-
-eureka:
-  instance:
-    hostname: localhost
-    prefer-ip-address: true
-  client:
-    register-with-eureka: false
-    fetch-registry: true
-    service-url:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-
-zuul:
-  routes:
-    registry-service:
-      path: /registry/**
-      serviceId: registry
+spring:
+  banner:
+    location: classpath:banner.txt
+  profiles:
+    active: test
