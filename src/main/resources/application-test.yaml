@@ -16,3 +16,7 @@ zuul:
     registry-service:
       path: /registry/**
       serviceId: registry
+
+ribbon:
+  ConnectTimeout: 5000
+  ReadTimeout: 60000
